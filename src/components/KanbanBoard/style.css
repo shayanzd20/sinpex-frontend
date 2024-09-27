@@ -1,0 +1,215 @@
+.kanban-board {
+    display: flex;
+    padding: 20px;
+ }
+
+ /* ************** */
+
+ /* Container for the entire column */
+.column {
+   display: flex;
+   flex-direction: column;
+   width: 300px; /* Adjust column width as needed */
+   height: 700px; /* Fixed height for the column */
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   overflow: hidden; /* Hide overflow outside the column */
+   margin-right: 20px;
+}
+
+/* Header for the column */
+.column-header {
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+   background-color: #f9f9f9;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* List of cases, which is scrollable */
+.case-list {
+   flex-grow: 1; /* Make the list take all available space */
+   overflow-y: auto; /* Scrollable content */
+   padding: 10px;
+}
+
+/* Create Case button sticks to the bottom of the column */
+.create-case-button {
+   position: sticky;
+   bottom: 0;
+   width: 100%;
+   padding: 10px 15px;
+   background-color: #f5f5f5;
+   border: none;
+   border-radius: 5px;
+   color: #333;
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   text-align: center;
+   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease;
+}
+
+.create-case-button:hover {
+   background-color: #e0e0e0;
+}
+
+ /* *************** */
+ /* .column {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #f4f5f7;
+    border-radius: 6px;
+ } */
+
+
+
+ .column-title {
+   display: flex;
+   align-items: center;
+}
+
+.column-title h3 {
+   margin-right: 8px;
+}
+ 
+ /* .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+ } */
+ 
+ /* .case-list {
+    min-height: 400px;
+    padding: 10px;
+ } */
+
+ .case-card {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .progress-bar {
+    background-color: #eee;
+    border-radius: 4px;
+    height: 8px;
+    margin: 5px 0;
+    overflow: hidden;
+ }
+ 
+ .progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #4caf50;
+ }
+
+
+.edit-button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+}
+
+.edit-button svg {
+   font-size: 18px; 
+   color: #555; 
+}
+
+.add-column {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 20%;
+   background-color: #f1f1f1; 
+   border: none; 
+   font-size: 24px;
+   color: #333; 
+   cursor: pointer;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+   transition: background-color 0.3s ease;
+}
+
+.add-column:hover {
+   background-color: #e0e0e0; 
+}
+
+
+/* Menu button (three dots icon) */
+
+.column-menu {
+   position: relative; /* Make the button’s container relative */
+   display: inline-block; /* Ensure it doesn’t take full width */
+}
+
+.menu-button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px; /* Adjust as needed */
+   color: #333;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+   position: absolute;
+   top: 40px;
+   right: 0;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   z-index: 10;
+}
+
+.dropdown-menu button {
+   background: none;
+   border: none;
+   width: 100%;
+   padding: 10px 15px;
+   text-align: left;
+   cursor: pointer;
+   font-size: 14px;
+   color: #333;
+}
+
+.dropdown-menu button:hover {
+   background-color: #f5f5f5;
+}
+
+/* .create-case-button {
+   display: block;
+   width: 100%;
+   padding: 10px 15px;
+   margin-top: 10px;
+   background-color: #f5f5f5;
+   border: none;
+   border-radius: 5px;
+   color: #333;
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   text-align: left;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease;
+}
+
+.create-case-button:hover {
+   background-color: #e0e0e0;
+} */
